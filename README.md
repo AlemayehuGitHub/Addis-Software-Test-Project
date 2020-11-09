@@ -4,9 +4,9 @@
 ## Node Module Dependencies
 	
 
-	### Front - End
+### Front - End
 
-	* "axios": "^0.21.0",
+    * "axios": "^0.21.0",
     * "react": "^17.0.1",
     * "react-dom": "^17.0.1",
     * "react-redux": "^7.2.2",
@@ -18,7 +18,7 @@
     * "typescript": "^4.0.5",
     * "web-vitals": "^0.2.4"
 
-    ### Back - End
+### Back - End server 
 
     Uses (#Mongo DB)
 
