@@ -5,7 +5,7 @@ import type { Employee, Employees } from '../types/employees'
 import service from './Api'
 
 export function fetchEmployeesFromApi(): Promise<Employee> | Promise<Employees> {
-  return service.get(process.env.MONGODB_URI+':'+process.env.PORT+'/employee/')
+  return service.get('https://addis-software-test-project.herokuapp.com/employee/')
 }
 
 export function deleteEmployeeFromApi(id: number): Promise<number> {

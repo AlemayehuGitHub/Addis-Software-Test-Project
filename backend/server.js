@@ -11,8 +11,16 @@ let Employee = require('./employee.model');
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/employee', { useNewUrlParser: true });
-const connection = mongoose.connection;
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/employee', { useNewUrlParser: true });
+// const connection = mongoose.connection;
+
+// const mongoose = require('mongoose');
+
+const connection = ""mongodb+srv://alex:<password>@cluster0.q9gu4.mongodb.net/<dbname>?retryWrites=true&w=majority";
+mongoose.connect(connection,{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+    .then(() => console.log("Database Connected Successfully"))
+    .catch(err => console.log(err));
+
 
 connection.once('open', function() {
     console.log("MongoDB database connection established successfully");
