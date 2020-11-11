@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import type { Axios } from 'axios'
 
-const API_ROOT = 'http://localhost:4000/employee'
+// const API_ROOT = 'http://localhost:4000/employee'
 
 class ApiService {
 
@@ -20,11 +20,11 @@ class ApiService {
   }
 
   patch(path: string, payload: Object): Promise<Object> {
-    return axios.post('http://localhost:4000/employee/edit/'+path, payload).then(response => response.data)
+    return axios.post(process.env.MONGODB_URI+':'+process.env.PORT+'/employee/edit/'+path, payload).then(response => response.data)
   }
 
   delete(path: string): Promise<number> {
-    return axios.post('http://localhost:4000/employee/delete/'+path).then(response => response.data)
+    return axios.post(process.env.MONGODB_URI+':'+process.env.PORT+'/employee/delete/'+path).then(response => response.data)
   }
 }
 
