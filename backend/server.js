@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 // const mongoose = require('mongoose');
 
-const connection = ""mongodb+srv://alex:<password>@cluster0.q9gu4.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const connection = ""mongodb+srv://alex:alex@cluster0.q9gu4.mongodb.net/employee?retryWrites=true&w=majority";
 mongoose.connect(connection,{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
     .then(() => console.log("Database Connected Successfully"))
     .catch(err => console.log(err));
